@@ -1,0 +1,178 @@
+*{
+    margin: 0; padding:0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body{
+    background:url(https://th.bing.com/th/id/R.d0d38064b3f19887932213d6353c708c?rik=Xv5yBdrg9Aqt3A&pid=ImgRaw&r=0) no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+.Titulo h1{
+    color: white ;
+    font-family: 'Fira Sans', sans-serif;
+    margin-top:20%;
+    display:block;
+    
+}
+header{
+    position: fixed;
+    top: 0; left: 0; right:0;
+    background:#ffffff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    padding:20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    z-index:1000; 
+}
+
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color:#000000;  
+}
+header .navbar ul{
+    
+    list-style: none;
+}
+header .navbar li{
+    position: relative;
+    float:left; 
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color:#000000;
+    display: block;
+}
+header .navbar ul li a:hover{
+   background:#145B02;
+   color:#ffffff;
+   border-style: solid;
+   border-color:#145B02;
+   border-radius:10px;
+}
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width:200px;
+    background: #ffffff;  
+    display:none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+header .navbar ul li ul li ul{
+    left: 200px;
+    top:0;
+}
+header .navbar ul li:hover > ul{
+    display:initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size:20px;
+    color:#000000;
+    cursor:pointer;
+    display:none;
+}
+.contenedor-perfil {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.perfil-usuario .contenedor-perfil {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.perfil-usuario .avatar-perfil {
+    display: block;
+    width: 230px;
+    height: 230px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom:10%;
+    left: 42%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #FFFFFF;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, .2);
+}
+.perfil-usuario img{
+    width:100%;
+}
+@media(max-width:991px){
+    header{
+        padding: 20px;
+    }
+    .Titulo h1{
+    color: white ;
+    font-family: 'Fira Sans', sans-serif;
+    margin-top:60%;
+    display:flex;
+    margin-left: 10%;
+    
+    }
+       .perfil-usuario .contenedor-perfil {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+    .perfil-usuario .avatar-perfil {
+        display: block;
+        width: 230px;
+        height: 230px;
+        background-color: #ffffff;
+        position: absolute;
+        bottom:10%;
+        left: 20%;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 8px solid #FFFFFF;
+        box-shadow: 0 0 12px 2px rgba(0, 0, 0, .2);
+    }
+    .perfil-usuario img{
+        width:100%;
+    }
+        header label{
+        display:initial;
+    }
+    header .navbar{
+        position:absolute;
+        top: 100%; left:0; right:0;
+        background: #ffffff;
+        border-top: 1px solid rgba(0,0,0,.1);
+        display: none;
+    }
+    header .navbar ul li{
+        width:100%;
+    }
+    header .navbar ul li ul{
+      position:relative;
+      width:100%;
+    }
+    header .navbar ul li ul li{
+        background:#ffffff;
+    }
+    header .navbar ul li ul li ul{
+        width:100%;
+        left:0;
+    }
+    #menu-bar:checked ~ .navbar{
+        display:initial;
+    }
+}
